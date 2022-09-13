@@ -43,3 +43,45 @@ a{
 #logo{
     float: left;
 }
+
+label{
+    clear: left;
+    padding-right: 20px;
+    width: 70px;
+    text-align: right;
+    font-size: larger;
+    font-family: "serif"
+}
+
+input, label{
+    float:left;
+}
+
+input:not([type=button]){
+    background-color: lightgray;
+}
+
+input[type=text], input[type=textarea]{
+    width: 63%;
+}
+
+input{
+    border-color: black;
+}
+
+input[type=button]{
+    float: right;
+    background-color: black;
+    color: white;
+}
+
+input[type=button]:hover{
+    border-color: white;
+}
+
+.connection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 0;
+}
