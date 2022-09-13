@@ -1,0 +1,50 @@
+html, head, header, body, main, footer{
+    padding: 0;
+    margin: 0;
+}
+
+ul li{
+    list-style: none;
+    display: inline;
+    margin-right: 30px;
+    padding: 0px;
+}
+
+.NavBar{
+    margin-right: auto;
+    width: 100%;
+    background-color: gray;
+    text-align: right;
+    padding: 10px 20px;
+    font-size: 20px;
+}
+
+html{
+    background-color: lightgray;
+}
+
+.FootBar{
+    margin-left: auto;
+    width:100%;
+    background-color: gray;
+    position: absolute;
+    bottom: 0;
+    font-size: 20px;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+a{
+    color: white;
+}
+
+#logo{
+    float: left;
+}
+
+.connection{
+    display: block;
+}
+
