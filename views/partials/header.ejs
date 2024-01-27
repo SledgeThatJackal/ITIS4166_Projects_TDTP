@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Final Project</title>
+        <link href="/css/defaultSettings.css" rel="stylesheet">
+    </head>
+
+    
+
+    <body>
+        <header> 
+            <div class="NavBar">
+                <a href="/" id="logo"><img src="/images/DennysTeaParty.png" height="65" width="65" alt="logo"></a>
+                <ul id="NavList">
+                    <li><a href="/connections/newConnection">Create a New Connection</a></li>
+                    
+                    <% if(!user){ %>
+                        <li><a href="/users/signup">Signup</a></li>
+                        <li><a href="/users/login">Login</a></li>
+                    <% } else { %>
+                        <li><a href="/users/profile">Profile</a></li>
+                        <li><a href="/users/logout">Logout</a></li>
+                    <% } %>
+                </ul>
+            </div>
+    
+            <div class="siteNav">
+                <ul>
+                    <li><a href="/connections">Connections</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <% if(errorMessages.length > 0) {%>
+            <% errorMessages.forEach(message => { %>
+                <div id="errorFlash">
+                    <h2><%=message%></h2>
+                </div>
+            <% }); %>
+        <% } %>
+
+        <% if(successMessages.length > 0) {%>
+            <% successMessages.forEach(message => { %>
+                <div id="successFlash">
+                    <h2><%=message%></h2>
+                </div>
+            <% }); %>
+        <% } %>

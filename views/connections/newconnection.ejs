@@ -1,0 +1,23 @@
+<%- include('../partials/header.ejs')%>
+    <div class="connection">
+        <form action="/connections" method="POST" id="connection">
+            <h2><label for="connectionTopic">Topic:</label></h2> 
+            <input type="text" id="connectionTopic" name="connectionTopic" placeholder="topic" required> <br><br>
+            <h2><label for="connectionTitle">Title:</label></h2>
+            <input type="text" id="connectionTitle" name="connectionTitle" placeholder="title" required> <br><br>
+            <h2><label for="details">Details:</label></h2>
+            <input type="text" id="details" name="details" placeholder="description" required> <br><br>
+            <h2><label for="location">Where:</label></h2>
+            <input type="text" id="location" name="location" placeholder="location" required> <br><br>
+            <h2><label for="date">When:</label></h2>
+            <input type="date" id="date" name="date" required> <br><br>
+            <h2><label for="start">Start:</label></h2>
+            <input type="time" id="start" name="start" required> <br><br>
+            <h2><label for="end">End:</label></h2>
+            <input type="time" id="end" name="end" required> <br><br>
+            <h2><label for="image">Image Url:</label></h2>
+            <input type="text" id="image" name="image" placeholder="image URL" required> <br><br>
+            <input type="submit" id="create" value="Create Connection">
+        </form>
+    </div>
+<%- include('../partials/footer.ejs')%>

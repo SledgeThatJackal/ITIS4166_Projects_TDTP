@@ -1,0 +1,25 @@
+<%- include('../partials/header.ejs')%>
+<div class="connection">
+    <form action="/connections/<%=connection.id%>?_method=PUT" method="POST" id="connection">
+        <h2><label for="connectionTopic">Topic:</label></h2> 
+        <input type="text" id="connectionTopic" name="connectionTopic" value="<%=connection.connectionTopic%>" required> <br><br>
+        <h2><label for="connectionTitle">Title:</label></h2>
+        <input type="text" id="connectionTitle" name="connectionTitle" value="<%=connection.connectionTitle%>" required> <br><br>
+        <h2><label for="host">Host:</label></h2>
+        <input type="text" id="host" name="host" value="<%=connection.host%>" required> <br><br>
+        <h2><label for="details">Details:</label></h2>
+        <input type="text" id="details" name="details" value="<%=connection.details%>" required> <br><br>
+        <h2><label for="location">Where:</label></h2>
+        <input type="text" id="location" name="location" value="<%=connection.location%>" required> <br><br>
+        <h2><label for="date">When:</label></h2>
+        <input type="date" id="date" name="date" value="<%=connection.date%>" required> <br><br>
+        <h2><label for="start">Start:</label></h2>
+        <input type="time" id="start" name="start" value="<%=connection.start%>" required> <br><br>
+        <h2><label for="end">End:</label></h2>
+        <input type="time" id="end" name="end" value="<%=connection.end%>" required> <br><br>
+        <h2><label for="image">Image Url:</label></h2>
+        <input type="text" id="image" name="image" value="<%=connection.image%>" required> <br><br>
+        <input type="submit" id="create" value="Update Connection">
+    </form>
+</div>
+<%- include('../partials/footer.ejs')%>

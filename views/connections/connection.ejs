@@ -1,0 +1,60 @@
+<%- include('../partials/header.ejs')%>
+    <table class="tableMeeting">
+        <tr>
+            <td>
+                <img src="<%=connection.image%>" alt="moviePoster" height="500" width="400" id="connectionImage">
+            </td>
+            <td>
+                <div id="meeting">
+                    <div class="meetingInfo">
+                        <h1><%=connection.connectionTitle%></h1>
+                        <ul id="details">
+                            <li><h2>Hosted by: <%=connection.host.firstname + ' ' + connection.host.lastname%></h2></li>
+                            <li><h2>Date: <%=connection.date.substring(5, 7)%>/<%=connection.date.substring(8, 10)%>/<%=connection.date.substring(0, 4)%></h2></li>
+                            <li><h2>Time: <%=connection.start%> - <%=connection.end%></h2></li>
+                            <li><h2>Location: <%=connection.location%></h2></li>
+                        </ul>
+                    </div>
+
+                    <div class="meetingDescription">
+                        <h1>Details</h1>
+                        <h2>
+                            &emsp;&ensp;<%=connection.details%>
+                        </h2>
+                    </div>
+                </div>
+            </td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <% if(user == connection.host._id) { %>
+                    <form method="POST" action="/connections/<%=connection.id%>?_method=DELETE" class="modifyButtons">
+                        <input type="submit" value="Delete" id="deleteButton">
+                    </form>
+                    <form method="GET" action="/connections/<%=connection.id%>/editConnection" class="modifyButtons">
+                        <input type="submit" value="Update" id="updateButton">
+                    </form>
+                <% } %>
+            </td>
+        </tr>
+    </table>
+    <% if(user != connection.host._id) { %>
+        <div id="rsvpContent">
+            <p id="rsvpInfo"><strong>Amount of RSVPs: </strong></p>
+            <p id="rsvpInfo"><strong>RSVP to attend</strong></p>
+            <form method="POST" action="/connections/<%=connection.id%>/rsvp" class="modifyButtons"> 
+                <input type="submit" value="Yes" name="rsvpStatus" id="yesButton">
+            </form>
+            <form method="POST" action="/connections/<%=connection.id%>/rsvp" class="modifyButtons"> 
+                <input type="submit" value="No" name="rsvpStatus" id="noButton">
+            </form>
+            <form method="POST" action="/connections/<%=connection.id%>/rsvp" class="modifyButtons"> 
+                <input type="submit" value="Maybe" name="rsvpStatus" id="maybeButton">
+            </form>
+        </div>
+    <% } %>
+<%- include('../partials/footer.ejs')%>

@@ -1,0 +1,15 @@
+<%- include('../partials/header.ejs')%>
+    <div class="registerDiv">
+        <form action="/users" method="POST" id="connection">
+            <h2><label for="firstname">First Name:</label></h2>
+            <input type="text" id="firstname" name="firstname" required> <br><br>
+            <h2><label for="lastname">Last Name:</label></h2>
+            <input type="text" id="lastname" name="lastname" required> <br><br>
+            <h2><label for="email">Email:</label></h2>
+            <input type="email" id="email" name="email" required> <br><br>
+            <h2><label for="password">Password:</label></h2>
+            <input type="password" id="password" name="password" minLength="8" maxlength="64" required> <br><br>
+            <input type="submit" id="registerButton" value="Register">
+        </form>
+    </div>
+<%- include('../partials/footer.ejs')%>

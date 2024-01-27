@@ -1,0 +1,46 @@
+<%- include('../partials/header.ejs')%>
+    <div class="websiteInfo">
+        <h2><%=user.firstname%>'s Connections</h2>
+        <% if(connections.length) { %>
+            <table class="profileConnections">
+                <tr>
+                    <td>
+                        <p><strong>Connection</strong></p>
+                    </td>
+                    <td>
+                        <p><strong>Category</strong></p>
+                    </td>
+                    <td>
+                        <p><strong>Actions</strong></p>
+                    </td>
+                </tr>
+                <% connections.forEach(connection => { %>
+                    <tr>
+                        <td>
+                            <a href="/connections/<%=connection.id%>"><p><%=connection.connectionTitle%></p></a>
+                        </td>
+
+                        <td>
+                            <p><%=connection.connectionTopic%></p>
+                        </td>
+
+                        <td>
+                            <form method="GET" action="/connections/<%=connection.id%>/editConnection">
+                                <input type="submit" value="Update" id="connectionTableButtons">
+                            </form>
+                            <form method="POST" action="/connections/<%=connection.id%>?_method=DELETE" >
+                                <input type="submit" value="Delete" id="connectionTableButtons">
+                            </form>
+                        </td>
+                    </tr>
+                <% }); %>
+            </table>
+        <% } else { %>
+            <p>You have not made any connections, go here to make some: <a href="/connections/newConnection">Create Connection</a></p>
+        <% } %>
+
+        <br>
+        <h2><%=user.firstname%>'s RSVPs</h2>
+        <p>You have not RSVP'd for any events.</p>
+    </div>
+<%- include('../partials/footer.ejs')%>

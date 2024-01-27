@@ -1,0 +1,18 @@
+<%- include('../partials/header.ejs')%>
+    <div class="connectionsList">
+        <% if(connection.length){ %>
+            <% topic.forEach(topics => { %>
+                <h1><u><%=topics%></u></h1>
+                <ul>
+                <% connection.forEach(connections => { %>
+                    <% if(connections.connectionTopic == topics) { %>
+                        <li><h2><a href="/connections/<%= connections.id%>"><%=connections.connectionTitle%></a></h2></li>
+                    <% } %>
+                <% }); %>
+                </ul>  
+            <% }); %>  
+        <% } else { %>
+            <h2>There are no current connections</h2>
+        <% } %>
+    </div>
+<%- include('../partials/footer.ejs')%>

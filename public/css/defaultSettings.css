@@ -1,0 +1,284 @@
+html, head, header, body, main, footer{
+    padding: 0;
+    margin: 0;
+}
+
+ul li{
+    list-style: none;
+    display: inline;
+    margin-right: 30px;
+    padding: 0px;
+}
+
+.NavBar{
+    margin-right: auto;
+    width: 100%;
+    background-color: #6F4E37;
+    text-align: right;
+    padding: 10px 20px;
+    font-size: 20px;
+}
+
+.siteNav{
+    border-top: thin solid black;
+    border-bottom: 4px solid black;
+    width: 100%;
+    background-color: #5C4033;
+    font-size: 16px;
+    margin-left: auto;
+}
+
+html{
+    background-color: #C4A484;
+}
+
+.siteNav, .NavBar{
+    overflow: hidden;
+}
+
+.FootBar{
+    border-top: 4px solid black;
+    margin-left: auto;
+    width:100%;
+    background-color: #6F4E37;
+    position: absolute;
+    bottom: 0;
+    font-size: 20px;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+a{
+    color: white;
+    padding-right: 20px;
+}
+
+#logo{
+    float: left;
+}
+
+label{
+    clear: left;
+    padding-right: 20px;
+    width: 70px;
+    text-align: right;
+    font-size: larger;
+    font-family: "serif"
+}
+
+input, label{
+    float:left;
+}
+
+input:not([type=button]){
+    background-color: #C4A484;
+}
+
+input[type=text], input[type=date]{
+    width: 63%;
+}
+
+input{
+    border-color: black;
+}
+
+input[type=submit], input[type=button]{
+    float: right;
+    background-color: black;
+    color: white;
+}
+
+input[type=button]:hover{
+    border-color: white;
+}
+
+.connection, .connectionsList{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+}
+
+.connection{
+    width: 50%;
+}
+
+.connectionsList ul li{
+    display: block;
+    padding: 10px; 
+}
+
+#connection label{
+    width: 150px;
+}
+
+.connectionsList a{
+    color: black;
+}
+
+.connectionsList a:hover{
+    text-decoration: underline;
+}
+
+.connectionsList h2{
+    margin-bottom: 0px;
+}
+
+#connection input{
+    height: 20px;
+    font-size: 12pt;
+}
+
+.meetingInfo ul li{
+    display: block;
+    padding-top: 0px;
+}
+
+.meetingInfo h2{
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+#connection input{
+    margin-left: 20px;
+}
+
+.meetingButtons .modifyButtons{
+    position: absolute;
+    top: 35%;
+    left: 75%;
+    transform: translate(-50%, -60%);
+    display: flex;
+}
+
+#deleteButton:hover, #updateButton:hover, #create:hover{
+    border: thin solid white;
+}
+
+#deleteButton{
+    margin-left: 10px;
+}
+
+.meetingDescription p{
+    padding-top: 10px;
+}
+
+.websiteInfo{
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+::placeholder, input[type=date], input[type=time]{
+    opacity: 1;
+    color: black;
+}
+
+.tableMeeting{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+td{
+    padding: 30px;
+}
+
+.profileConnections{
+    border: 1px solid black;
+    background-color: #6F4E37;
+}
+
+.profileConnections p, .profileConnections a{
+    padding: 0;
+    margin: 0;
+}
+
+.profileConnections td{
+    padding: 10px;
+    width: 300px;
+    border: 1px black solid;
+    background-color: #a07150;
+}
+
+#connectionTableButtons{
+    float: left;
+    margin-right: 10px;
+}
+
+#rsvpInfo {
+    text-align: left;
+}
+
+#rsvpContent {
+    margin-right: 20px;
+    float: right;
+    width: 160px;
+}
+
+#rsvpContentButtons {
+    margin-right: 5px;
+    float: left;
+}
+
+#yesButton {
+    background-color: green;
+    margin-right: 5px;
+    float: left;
+}
+
+#noButton {
+    background-color: red;
+    margin-right: 5px;
+    float: left;
+}
+
+#maybeButton{
+    background-color: lightskyblue;
+    margin-right: 5px;
+    float: left;
+}
+
+#errorFlash {
+    width: 100%;
+    height: 50px;
+    background-color: red;
+    text-align: center;
+    border-bottom: 4px solid black;
+}
+
+#successFlash {
+    width: 100%;
+    height: 50px;
+    background-color: green;
+    text-align: center;
+    border-bottom: 4px solid black;
+}
+
+#successFlash h2, #errorFlash h2{
+    margin: 0;
+    padding: 10px;
+}
+
+#firstname, #lastname, #email, #password {
+    width: 65.5%;
+}
+
+#registerButton{
+    width: 100px;
+    float: right;
+}
+
+#registerButton:hover{
+    border-color: white;
+}
+
+.registerDiv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    width: 30%;
+}
